@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Click the buttons below to manually start or stop the hosted service.</p>
+    <form asp-action="StartHostedService" method="post">
+        <button type="submit" class="btn btn-primary">Start Hosted Service</button>
+    </form>
+    <form asp-action="StopHostedService" method="post">
+        <button type="submit" class="btn btn-danger">Stop Hosted Service</button>
+    </form>
+</div>
+
+<p>Output:</p>
+<pre>@TempData["Message"]</pre>
